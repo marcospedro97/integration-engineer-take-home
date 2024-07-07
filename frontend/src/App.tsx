@@ -1,63 +1,23 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
+import TaskForm from './components/taskForm';
+import TaskList from './components/taskList';
+import './App.css';
 
-type Task = {
-  id: number,
-  title: string,
-  description: string
-}
-
-function App() {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [formData, setFormData] = useState({ title: '', description: '' });
-
-  useEffect(() => {
-    fetchTasks();
-  }, []);
-
-  const fetchTasks = async () => {
-    const response = await fetch('http://localhost:8000/tasks')
-    const tasks = await response.json();
-    setTasks(tasks);
-  };
-
-  /* Complete the following functions to hit endpoints on your server */
-  const createTask = async () => {
-  };
-
-  const deleteTask = async (id: string) => {
-  };
-
-
+const App: React.FC = () => {
   return (
-    <div>
-      <h1>Task Management App</h1>
-      <ul>
-        {tasks.map(task => (
-          <li key={task.id}>
-            <h3>{task.title}</h3>
-            <p>{task.description}</p>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-      <div>
-        <h2>Create Task</h2>
-        <input
-          type="text"
-          placeholder="Title"
-          value={formData.title}
-          onChange={e => setFormData({ ...formData, title: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Description"
-          value={formData.description}
-          onChange={e => setFormData({ ...formData, description: e.target.value })}
-        />
-        <button onClick={createTask}>Create</button>
-      </div>
+    <div className="App">
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/create">Create Task</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<TaskList />} />
+        <Route path="/create" element={<TaskForm />} />
+        <Route path="/edit/:id" element={<TaskForm />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
