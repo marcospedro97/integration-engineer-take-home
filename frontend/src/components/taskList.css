@@ -1,0 +1,92 @@
+.task-list {
+  width: 100%;
+}
+
+.task-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.create-task {
+  padding: 2% 4%;
+  border: none;
+  background-color: #1e90ff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-task:hover {
+  background-color: #104e8b;
+}
+
+.tasks {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.task {
+  flex: 1 1 calc(50% - 2%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #3c3f41;
+  margin-bottom: 2%;
+  transition: box-shadow 0.3s ease;
+}
+
+.task:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task h3 {
+  margin: 0;
+  color: #1e90ff;
+}
+
+.task p {
+  margin: 5px 0 10px;
+}
+
+.task-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.task button {
+  padding: 7px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task button.edit {
+  background-color: #1e90ff;
+  color: white;
+  
+}
+
+.task button.edit:hover {
+  background-color: #424b69;
+}
+
+.task button.delete {
+  background-color: #c3615c;
+  color: white;
+}
+
+.task button.delete:hover {
+  background-color: #732929;
+}
