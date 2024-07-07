@@ -1,0 +1,37 @@
+.task-form {
+  width: 100%;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em; /* Increased gap for better spacing */
+  margin: 0 auto;
+  padding: 2em; /* Added padding for better visual separation */
+  border: 1px solid #ccc; /* Added border for clearer boundaries */
+  border-radius: 8px; /* Rounded corners */
+}
+
+input, textarea {
+  padding: 1em;
+  border: 1px solid #ccc; /* Lighter border color for inputs */
+  border-radius: 4px;
+  background-color: #f9f9f9; /* Light gray background */
+  color: #333; /* Darker text color for better readability */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin-bottom: 1em; /* Add margin bottom for spacing between inputs */
+}
+
+.submit-btn {
+  padding: 1em; /* Match padding with inputs */
+  border: none;
+  background-color: #1e90ff; /* Match color with menu bar */
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Match width with inputs */
+}
+
+.submit-btn:hover {
+  background-color: #104e8b;
+}
