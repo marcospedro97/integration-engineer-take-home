@@ -50,3 +50,46 @@ Regards,
 The Duda Solutions Engineering Team
 
 ## Add any instructions to get your submission running below this line.
+
+### Backend Setup
+#### Install Dependencies:
+
+Ensure you have Node.js 20.13.1 and npm 10.5.2 installed on your machine.
+
+#### Install Packages:
+```
+cd backend
+npm install
+```
+
+#### Run the Backend Server:
+```
+npm start
+```
+The server will start running on http://localhost:8000.
+
+### Frontend Setup
+#### Install Dependencies:
+
+```
+cd frontend
+npm install
+```
+#### Start the React App:
+
+```
+npm run dev
+```
+This will start the development server for the React app.
+
+#### Check lint
+
+```
+npm run lint
+```
+
+#### Accessing the Application:
+
+Open your web browser and go to http://localhost:5173 to access the Task Management Application.
+#### Additional Notes:
+Ensure both backend and frontend servers are running simultaneously for full application functionality.
